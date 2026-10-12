@@ -1,0 +1,186 @@
+<?php
+session_start();
+include("koneksi.php");
+
+// Ambil semua produk
+$data = mysqli_query($conn, "SELECT * FROM produk ORDER BY id_produk DESC");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="history-navbar">
+
+    <ul class="history-nav-links">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="history.html">History</a></li>
+
+        <li><a href="ourstory.html">Our Story</a></li>
+
+        <li><a href="product.html">Product</a></li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+
+</nav>
+
+    <!-- =========================
+        PRODUCT SECTION
+    ========================= -->
+    <section class="product">
+
+        <!-- TITLE -->
+        <div class="product-title">
+            <h1>Our Products</h1>
+
+            <p>
+                Discover our latest streetwear collection.
+            </p>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-container">
+
+            <!-- PRODUCT 1 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product1.png"
+                        alt="Product 1"
+                    >
+
+                    <div class="product-content">
+                        <h2>Streetwear T-Shirt</h2>
+                        <h3>Rp 150.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 2 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product2.png"
+                        alt="Product 2"
+                    >
+
+                    <div class="product-content">
+                        <h2>Oversized Hoodie</h2>
+                        <h3>Rp 250.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 3 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product3.png"
+                        alt="Product 3"
+                    >
+
+                    <div class="product-content">
+                        <h2>Casual Streetwear</h2>
+                        <h3>Rp 180.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 4 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product2.png"
+                        alt="Product 2"
+                    >
+
+                    <div class="product-content">
+                        <h2>Oversized Hoodie</h2>
+                        <h3>Rp 250.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 5 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product3.png"
+                        alt="Product 3"
+                    >
+
+                    <div class="product-content">
+                        <h2>Casual Streetwear</h2>
+                        <h3>Rp 180.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+    <footer class="footer reveal">
+
+        <div class="footer-content">
+
+            <h2>
+                LAYBACK STUDIO
+            </h2>
+
+            <p>
+                Modern streetwear fashion
+                for everyday lifestyle.
+            </p>
+
+
+            <!-- FOOTER MENU -->
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="history.html">History</a>
+
+                <a href="ourstory.html">Our Story</a>
+
+                <a href="product.html">Product</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+            <span>
+                © 2026 Layback Studio.
+                All Rights Reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

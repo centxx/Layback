@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;   
+}
+
+/* HERO */
+.hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* FOTO */
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* FOTO AKTIF */
+.slide.active{
+    opacity: 1;
+}
+
+/* NAVBAR */
+.navbar{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+
+    z-index: 1000;
+
+    background: transparent;
+}
+
+/* MENU */
+.nav-links{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+/* LINK */
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* LINK */
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    position: relative;
+}
+
+/* UNDERLINE */
+.nav-links li a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    transition: width 0.35s ease;
+}
+
+/* HOVER */
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width:900px){
+
+    .navbar{
+        top: 15px;
+        left: 20px;
+    }
+
+    .nav-links{
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-links li a{
+        font-size: 15px;
+    }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .navbar{
+        width: 100%;
+
+        left: 0;
+
+        padding: 0 15px;
+    }
+
+    .nav-links{
+        gap: 15px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-links li a{
+        font-size: 13px;
+    }
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer{
+    width: 100%;
+
+    padding: 70px 20px 40px;
+
+    background: #111;
+
+    text-align: center;
+}
+
+/* CONTENT */
+.footer-content h2{
+    color: white;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.footer-content p{
+    color: #999;
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+/* LINKS */
+.footer-links{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+/* LINK */
+.footer-links a{
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 15px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+/* UNDERLINE */
+.footer-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 1px;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+.footer-links a:hover::after{
+    width: 100%;
+}
+
+/* COPYRIGHT */
+.footer-content span{
+    color: #666;
+
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+
+    .footer-content h2{
+        font-size: 22px;
+    }
+
+    .footer-links{
+        gap: 18px;
+    }
+}
