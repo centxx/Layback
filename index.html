@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+    <nav class="navbar">
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="history.html">History</a></li>
+
+            <li><a href="ourstory.html">Our Story</a></li>
+
+            <li><a href="product.html">Product</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+        HERO SECTION
+    ========================= -->
+    <section class="hero">
+
+        <!-- SLIDE 1 -->
+        <picture class="slide active">
+            <source
+                media="(max-width: 768px)"
+                srcset="asset/mobile/start1.png"
+            >
+            <img
+                src="asset/Start1.png"
+                alt="Hero Slide 1"
+            >
+        </picture>
+
+        <!-- SLIDE 2 -->
+        <picture class="slide">
+            <source
+                media="(max-width: 768px)"
+                srcset="asset/mobile/start2.png"
+            >
+            <img
+                src="asset/start2.png"
+                alt="Hero Slide 2"
+            >
+        </picture>
+
+        <!-- SLIDE 3 -->
+        <picture class="slide">
+            <source
+                media="(max-width: 768px)"
+                srcset="asset/mobile/start3.png"
+            >
+            <img
+                src="asset/start3.png"
+                alt="Hero Slide 3"
+            >
+        </picture>
+
+        <!-- SLIDE 4 -->
+        <picture class="slide">
+            <source
+                media="(max-width: 768px)"
+                srcset="asset/mobile/start4.png"
+            >
+            <img
+                src="asset/start4.png"
+                alt="Hero Slide 4"
+            >
+        </picture>
+
+    </section>
+
+
+
+
+    <!-- =========================
+        PRODUCT SECTION
+    ========================= -->
+    <section class="product">
+
+        <!-- TITLE -->
+        <div class="product-title">
+            <h1>Our Products</h1>
+
+            <p>
+                Discover our latest streetwear collection.
+            </p>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-container">
+
+            <!-- PRODUCT 1 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product1.png"
+                        alt="Product 1"
+                    >
+
+                    <div class="product-content">
+                        <h2>Streetwear T-Shirt</h2>
+                        <h3>Rp 150.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 2 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product2.png"
+                        alt="Product 2"
+                    >
+
+                    <div class="product-content">
+                        <h2>Oversized Hoodie</h2>
+                        <h3>Rp 250.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 3 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product3.png"
+                        alt="Product 3"
+                    >
+
+                    <div class="product-content">
+                        <h2>Casual Streetwear</h2>
+                        <h3>Rp 180.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 4 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product4.png"
+                        alt="Product 2"
+                    >
+
+                    <div class="product-content">
+                        <h2>Oversized Hoodie</h2>
+                        <h3>Rp 250.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PRODUCT 5 -->
+            <a href="detail_produk.html" class="product-link">
+                <div class="product-card">
+                    <img
+                        src="asset/product5.png"
+                        alt="Product 3"
+                    >
+
+                    <div class="product-content">
+                        <h2>Casual Streetwear</h2>
+                        <h3>Rp 180.000</h3>
+                        <button type="button">View Detail</button>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         360 VIEW SECTION
+    ========================= -->
+    <section class="view360 reveal">
+
+        <!-- TITLE -->
+        <div class="view360-title reveal">
+
+            <h2>
+                Explore with 360° View
+            </h2>
+
+            <p>
+                Drag or swipe to rotate the model.
+            </p>
+
+        </div>
+
+
+        <!-- VIEWER -->
+        <div class="viewer-container reveal">
+
+            <img
+                id="viewer"
+                src="asset/360-1/1.png"
+                draggable="false"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+    <footer class="footer reveal">
+
+        <div class="footer-content">
+
+            <h2>
+                LAYBACK STUDIO
+            </h2>
+
+            <p>
+                Modern streetwear fashion
+                for everyday lifestyle.
+            </p>
+
+
+            <!-- FOOTER MENU -->
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="history.html">History</a>
+
+                <a href="ourstory.html">Our Story</a>
+
+                <a href="product.html">Product</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+            <span>
+                © 2026 Layback Studio.
+                All Rights Reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         Navbar SCRIPT
+    ========================= -->
+<script>
+
+    const navbar =
+    document.querySelector(".navbar");
+
+    window.addEventListener(
+        "scroll",
+        ()=>{
+
+            if(window.scrollY > 50){
+
+                navbar.classList.add("scrolled");
+
+            }else{
+
+                navbar.classList.remove("scrolled");
+
+            }
+
+        }
+    );
+
+</script>
+
+
+    <!-- =========================
+         HERO SLIDER SCRIPT
+    ========================= -->
+    <script>
+
+        const slides =
+        document.querySelectorAll(".slide");
+
+        let index = 0;
+
+        setInterval(() => {
+
+            slides[index]
+            .classList.remove("active");
+
+            index =
+            (index + 1) % slides.length;
+
+            slides[index]
+            .classList.add("active");
+
+        }, 5000);
+
+    </script>
+
+
+    <!-- =========================
+         360 VIEW SCRIPT
+    ========================= -->
+    <script>
+
+        const viewer =
+        document.getElementById("viewer");
+
+        const totalFrames = 8;
+
+        let currentFrame = 1;
+
+        let isDragging = false;
+
+        let startX = 0;
+
+
+        /* =========================
+           UPDATE FRAME
+        ========================= */
+        function updateFrame(frame){
+
+            viewer.src =
+            `asset/360-1/${frame}.png`;
+
+        }
+
+
+        /* =========================
+           DESKTOP MOUSE
+        ========================= */
+
+        viewer.addEventListener(
+            "mousedown",
+            (e)=>{
+
+                isDragging = true;
+
+                startX = e.pageX;
+
+            }
+        );
+
+        window.addEventListener(
+            "mouseup",
+            ()=>{
+
+                isDragging = false;
+
+            }
+        );
+
+        window.addEventListener(
+            "mousemove",
+            (e)=>{
+
+                if(!isDragging) return;
+
+                let moveX =
+                e.pageX - startX;
+
+                if(Math.abs(moveX) > 25){
+
+                    if(moveX > 0){
+
+                        currentFrame++;
+
+                        if(
+                            currentFrame >
+                            totalFrames
+                        ){
+                            currentFrame = 1;
+                        }
+
+                    }else{
+
+                        currentFrame--;
+
+                        if(
+                            currentFrame < 1
+                        ){
+                            currentFrame =
+                            totalFrames;
+                        }
+
+                    }
+
+                    updateFrame(currentFrame);
+
+                    startX = e.pageX;
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           MOBILE TOUCH
+        ========================= */
+
+        viewer.addEventListener(
+            "touchstart",
+            (e)=>{
+
+                startX =
+                e.touches[0].pageX;
+
+            }
+        );
+
+        viewer.addEventListener(
+            "touchmove",
+            (e)=>{
+
+                let moveX =
+                e.touches[0].pageX - startX;
+
+                if(Math.abs(moveX) > 20){
+
+                    if(moveX > 0){
+
+                        currentFrame++;
+
+                        if(
+                            currentFrame >
+                            totalFrames
+                        ){
+                            currentFrame = 1;
+                        }
+
+                    }else{
+
+                        currentFrame--;
+
+                        if(
+                            currentFrame < 1
+                        ){
+                            currentFrame =
+                            totalFrames;
+                        }
+
+                    }
+
+                    updateFrame(currentFrame);
+
+                    startX =
+                    e.touches[0].pageX;
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <!-- =========================
+         SCROLL POPUP EFFECT
+    ========================= -->
+    <script>
+
+        const reveals =
+        document.querySelectorAll(".reveal");
+
+        function revealOnScroll(){
+
+            reveals.forEach((element)=>{
+
+                const windowHeight =
+                window.innerHeight;
+
+                const revealTop =
+                element
+                .getBoundingClientRect().top;
+
+                const revealPoint = 120;
+
+                if(
+                    revealTop <
+                    windowHeight - revealPoint
+                ){
+
+                    element.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
+        revealOnScroll();
+
+    </script>
+
+
+</body>
+</html>
