@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detail produk Layback Studio. Lihat foto produk, informasi, dan detail produk.">
+    <title>Detail Product | Layback Studio</title>
+
+    <!-- Sesuaikan nama file ini dengan CSS kamu -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav class="history-navbar">
+
+        <ul class="history-nav-links">
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="../history.html">History</a></li>
+
+            <li><a href="../ourstory.html">Our Story</a></li>
+
+            <li><a href="../product.html">Product</a></li>
+
+            <li><a href="../contact.html">Contact Us</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- DETAIL PRODUK -->
+    <main>
+        <section class="detail-product">
+
+            <!-- SLIDER FOTO PRODUK -->
+            <div class="detail-slider" aria-label="Galeri foto produk">
+                <div class="slider-images">
+                    <!-- Ganti nama file gambar sesuai aset produk kamu -->
+                    <img src="../asset/product1-1.png" alt="Foto produk Layback Studio tampak depan"
+                         class="detail-slide active">
+                    <img src="../asset/product1-2.png" alt="Foto produk Layback Studio tampak samping"
+                         class="detail-slide">
+                    <img src="../asset/product1-3.png" alt="Foto detail produk Layback Studio"
+                         class="detail-slide">
+                </div>
+
+                <button type="button" class="slider-btn prev" aria-label="Foto sebelumnya"
+                        onclick="changeSlide(-1)">&#10094;</button>
+                <button type="button" class="slider-btn next" aria-label="Foto berikutnya"
+                        onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- INFORMASI PRODUK -->
+            <div class="detail-content">
+
+                <h1>Layback Studio T-Shirt</h1>
+                <h2>Rp150.000</h2>
+
+                <p><strong>Material:</strong> Cotton Combed</p>
+                <p><strong>Warna:</strong> Black</p>
+                <p><strong>Ukuran:</strong> S, M, L, XL</p>
+
+                <a
+                    class="buy-btn"
+                    href="https://shopee.co.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Beli Sekarang
+                </a>
+            </div>
+        </section>
+
+    <!-- =========================
+         360 VIEW SECTION
+    ========================= -->
+    <section class="view360 reveal">
+
+        <!-- TITLE -->
+        <div class="view360-title reveal">
+
+            <h2>
+                Explore with 360° View
+            </h2>
+
+            <p>
+                Drag or swipe to rotate the model.
+            </p>
+
+        </div>
+
+
+        <!-- VIEWER -->
+        <div class="viewer-container reveal">
+
+            <img
+                id="viewer"
+                src="../asset/360-1/1.png"
+                draggable="false"
+            >
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>LAYBACK STUDIO</h2>
+            <p>Wear your style. Keep it laid-back.</p>
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../history.html">History</a>
+                <a href="../our-story.html">Our Story</a>
+                <a href="../product.html">Product</a>
+                <a href="../contact.html">Contact Us</a>
+            </div>
+            <span>&copy; <span id="year"></span> Layback Studio. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        // SLIDER FOTO PRODUK
+        const productSlides = document.querySelectorAll(".detail-slide");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            if (!productSlides.length) return;
+
+            productSlides[currentSlide].classList.remove("active");
+            currentSlide = (index + productSlides.length) % productSlides.length;
+            productSlides[currentSlide].classList.add("active");
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+    </script>
+
+    <!-- =========================
+         360 VIEW SCRIPT
+    ========================= -->
+    <script>
+
+        const viewer =
+        document.getElementById("viewer");
+
+        const totalFrames = 8;
+
+        let currentFrame = 1;
+
+        let isDragging = false;
+
+        let startX = 0;
+
+
+        /* =========================
+           UPDATE FRAME
+        ========================= */
+        function updateFrame(frame){
+
+            viewer.src =
+            `../asset/360-1/${frame}.png`;
+
+        }
+
+
+        /* =========================
+           DESKTOP MOUSE
+        ========================= */
+
+        viewer.addEventListener(
+            "mousedown",
+            (e)=>{
+
+                isDragging = true;
+
+                startX = e.pageX;
+
+            }
+        );
+
+        window.addEventListener(
+            "mouseup",
+            ()=>{
+
+                isDragging = false;
+
+            }
+        );
+
+        window.addEventListener(
+            "mousemove",
+            (e)=>{
+
+                if(!isDragging) return;
+
+                let moveX =
+                e.pageX - startX;
+
+                if(Math.abs(moveX) > 25){
+
+                    if(moveX > 0){
+
+                        currentFrame++;
+
+                        if(
+                            currentFrame >
+                            totalFrames
+                        ){
+                            currentFrame = 1;
+                        }
+
+                    }else{
+
+                        currentFrame--;
+
+                        if(
+                            currentFrame < 1
+                        ){
+                            currentFrame =
+                            totalFrames;
+                        }
+
+                    }
+
+                    updateFrame(currentFrame);
+
+                    startX = e.pageX;
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           MOBILE TOUCH
+        ========================= */
+
+        viewer.addEventListener(
+            "touchstart",
+            (e)=>{
+
+                startX =
+                e.touches[0].pageX;
+
+            }
+        );
+
+        viewer.addEventListener(
+            "touchmove",
+            (e)=>{
+
+                let moveX =
+                e.touches[0].pageX - startX;
+
+                if(Math.abs(moveX) > 20){
+
+                    if(moveX > 0){
+
+                        currentFrame++;
+
+                        if(
+                            currentFrame >
+                            totalFrames
+                        ){
+                            currentFrame = 1;
+                        }
+
+                    }else{
+
+                        currentFrame--;
+
+                        if(
+                            currentFrame < 1
+                        ){
+                            currentFrame =
+                            totalFrames;
+                        }
+
+                    }
+
+                    updateFrame(currentFrame);
+
+                    startX =
+                    e.touches[0].pageX;
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
