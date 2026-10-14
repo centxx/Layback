@@ -52,7 +52,7 @@ html, body{
 }
 
 /* MOBILE */
-@media (max-width: 767px) {
+@media (max-width: 360px) {
     .hero {
         height: 100svh;
         min-height: 0;
